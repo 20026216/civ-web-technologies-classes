@@ -1,0 +1,14 @@
+main {
+    padding: 50px;
+}
+
+#about-me {
+    border: 200px;
+}
+#services {
+    margin: 50px;
+}
+
+#services article:first-of-type {
+    margin: 100px 50px 30px 20px;
+}

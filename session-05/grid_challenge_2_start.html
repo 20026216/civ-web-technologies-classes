@@ -6,11 +6,28 @@
     <title>Image Gallery Grid using CSS Grid</title>
     <style>
       /* Grid Container */
+      .gallery-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        gri
 
+
+      }
       /* Gallery Item (Image) */
+      .gallery-item{
+        background-color: antiquewhite ;
+        border: 1px solid #ec1c1c;
+        padding: 20px;
+        text-align: center;
 
+      }
       /* Media Query for Responsive Layout */
-      @media (max-width: 768px) {
+      @media (min-width: 768px) {
+        .gallery-container{
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
