@@ -1,0 +1,39 @@
+/*.before-example::before {*/
+/*    margin-right: 20px;*/
+/*}*/
+
+body {
+    background-color: aqua;
+}
+.
+a[href*="example.com"] {
+    color: green;
+}
+
+nav ul li a:first-child {
+    color: brown;
+}
+@font-face {
+    font-family: 'New Amsterdam';
+    src: url('../fonts/NewAmsterdam-Regular.ttf');
+    /*    format('ttf'),url('../fonts/NewAmsterdam-Regular.ttf');*/
+    /*format('ttf');*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: pink;
+        font-family: "New Amsterdam";
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: coral;
+    }
+
+}
+
+
