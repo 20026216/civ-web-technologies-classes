@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Advanced Selectors Activity</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
@@ -12,6 +12,8 @@
   <body class="bg-gray-100">
     <header>
       <h1>News</h1>
+
+
       <!-- <nav></nav> -->
     </header>
     <div class="container mx-auto py-6">
@@ -81,7 +83,18 @@
         method="post"
         data-post-url="https://dev.screencraft.net.au/~staff-ag/show-me/index.php?"
       >
-        <!-- Add your form elements here, use Tailwind classes if you like   -->
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+
+          <label for="message">Message</label>
+          <input type="text" id="message" name="message">
+
+
+
+
       </form>
       <div
         class="confirmation-message hidden bg-green-500 text-white px-4 py-2 rounded-lg text-center"
