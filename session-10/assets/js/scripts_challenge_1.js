@@ -1,5 +1,8 @@
+let regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+
 function isValidEmail(email) {
-  // Use expression operators, the match method, a regex and strings to validate the email
+    const valid = email.match(regex);
+    return valid;
 }
 
 // Test cases
