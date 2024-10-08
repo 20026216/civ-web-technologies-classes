@@ -30,25 +30,8 @@
     </div>
 
     <!-- Main logic for selecting and rendering components -->
+    <script src="js/data-processor.js"></script>
     <script>
-      customElements.define(
-        "data-processor",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-            this.shadowRoot.innerHTML = `
-          <style>
-            .component-box { margin-top: 20px; }
-          </style>
-          <div class="component-box">
-            <slot></slot>
-          </div>
-        `;
-          }
-        }
-      );
-
       document
         .getElementById("methodSelector")
         .addEventListener("change", function () {
@@ -61,131 +44,11 @@
         });
     </script>
 
-    <!-- Filter Component -->
-    <script>
-      customElements.define(
-        "js-filter",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-
-            const people = ["Alice", "Bob", "Charlie", "David"];
-            const filteredPeople = people.filter((person) =>
-              person.includes("a")
-            );
-
-            this.shadowRoot.innerHTML = `
-          <div class="box">
-            <h2 class="subtitle">Filtered people (includes 'a'):</h2>
-            <ul>
-              ${filteredPeople.map((person) => `<li>${person}</li>`).join("")}
-            </ul>
-          </div>
-        `;
-          }
-        }
-      );
-    </script>
-
-    <!-- Map Component -->
-    <script>
-      customElements.define(
-        "js-map",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-
-            const numbers = [1, 2, 3, 4];
-            const doubled = numbers.map((num) => num * 2);
-
-            this.shadowRoot.innerHTML = `
-          <div class="box">
-            <h2 class="subtitle">Mapped numbers (doubled):</h2>
-            <ul>
-              ${doubled.map((num) => `<li>${num}</li>`).join("")}
-            </ul>
-          </div>
-        `;
-          }
-        }
-      );
-    </script>
-
-    <!-- Sort Component -->
-    <script>
-      customElements.define(
-        "js-sort",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-
-            const names = ["Charlie", "Bob", "Alice", "David"];
-            const sortedNames = names.sort();
-
-            this.shadowRoot.innerHTML = `
-          <div class="box">
-            <h2 class="subtitle">Sorted names:</h2>
-            <ul>
-              ${sortedNames.map((name) => `<li>${name}</li>`).join("")}
-            </ul>
-          </div>
-        `;
-          }
-        }
-      );
-    </script>
-
-    <!-- Includes Component -->
-    <script>
-      customElements.define(
-        "js-includes",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-
-            const items = ["apple", "banana", "grape"];
-            const hasBanana = items.includes("banana") ? "Yes" : "No";
-
-            this.shadowRoot.innerHTML = `
-          <div class="box">
-            <h2 class="subtitle">Does the list include 'banana'?:</h2>
-            <p>${hasBanana}</p>
-          </div>
-        `;
-          }
-        }
-      );
-    </script>
-
-    <!-- Find Component -->
-    <script>
-      customElements.define(
-        "js-find",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            this.attachShadow({ mode: "open" });
-            debugger;
-            const users = [
-              { id: 1, name: "Alice" },
-              { id: 2, name: "Bob" },
-              { id: 3, name: "Charlie" },
-            ];
-            const foundUser = users.find((user) => user.id === 2);
-
-            this.shadowRoot.innerHTML = `
-          <div class="box">
-            <h2 class="subtitle">Found user with ID 2:</h2>
-            <p>${foundUser ? foundUser.name : "User not found"}</p>
-          </div>
-        `;
-          }
-        }
-      );
-    </script>
+    <!-- Individual component scripts -->
+    <script src="js/js-filter.js"></script>
+    <script src="js/js-map.js"></script>
+    <script src="js/js-sort.js"></script>
+    <script src="js/js-includes.js"></script>
+    <script src="js/js-find.js"></script>
   </body>
 </html>
