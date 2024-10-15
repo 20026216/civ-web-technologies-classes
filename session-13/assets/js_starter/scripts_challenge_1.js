@@ -1,5 +1,7 @@
 // Challenge 1 Starter
 // Event listener for button 1
+document.getElementById("button1")
+    .addEventListener("click", function(){this.textContent="Clicked!"});
 
 // Event listener for button 2
 
