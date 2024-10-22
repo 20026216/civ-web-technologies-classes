@@ -1,7 +1,7 @@
 // localStorage API
 // Store data
-let data = 'The data that I want to store for later.';
-localStorage.setItem('myDataKey', data);
+let localdata = 'The data that I want to store for later.';
+localStorage.setItem('myDataKey', localdata);
 
 // Get data
 let savedData = localStorage.getItem('myDataKey');
@@ -11,8 +11,8 @@ localStorage.removeItem('myDataKey');
 
 // sessionStorage API
 // Store data
-let data = 'The data that I want to store temporarily.';
-sessionStorage.setItem('myTempDataKey', data);
+let sessionData = 'The data that I want to store temporarily.';
+sessionStorage.setItem('myTempDataKey', sessionData);
 
 // Get data
 let tempData = sessionStorage.getItem('myTempDataKey');
